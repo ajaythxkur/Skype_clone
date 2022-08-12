@@ -1,0 +1,666 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    background-color: var(--black);
+}
+
+@font-face {
+    font-family: Segoe UI;
+    src: url(../font/SegoeUI.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Segoe UI;
+    src: url(../font/SegoeUIBold.ttf);
+    font-weight: 800;
+}
+
+:root {
+    --white:#fff;
+    --black:#1b1b1b;
+    --blue:#0067b8;
+    --gray:#666;
+    --faded-gray: rgba(0,0,0,.1);
+    --more-faded-gray: rgba(0,0,0,.2);
+    --red:#e81123;
+    --gray-text: rgb(138, 141, 145);
+    --dark-blue:#005da6; 
+    --section-bg:#f5f8fb;
+    --dashboard-bg-a:rgb(32, 32, 32);
+    --dashboard-bg-b:rgb(25, 25, 27);
+    --blue-light:rgb(0, 188, 242);
+    --bg-darken:rgb(43, 44, 51);
+    --nav-icons:#0078d4;
+    --green:rgb(77, 217, 101);
+    --box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+/* scrollbar css  */
+::-webkit-scrollbar-track {
+    background: var(--faded-gray);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--gray-text);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray);
+    width: 8px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/*============ LOGIN PAGE CSS START ============*/
+.login, .security-error, .email-sign-up, .signup, .signin-options {
+    background-color: var(--section-bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-wrapper {
+    background-color: var(--white);
+    min-height: 340px;
+    box-shadow: var(--box-shadow);
+    padding: 35px 35px;
+} 
+
+.login-heading h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.input-field .form-floating .form-control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    border-color: var(--black);
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 500;
+    padding-left: 4px;
+} 
+
+.input-field .form-floating .form-control:focus {
+    box-shadow: none;
+}
+
+.input-field .form-floating label{
+    padding-left: 0px !important;
+}
+
+.signup-link .signup-text {
+    font-size: 13px;
+}
+
+.signup-link a:hover, .security-key .security-key-text:hover{
+    color: var(--gray);
+    text-decoration: underline !important;
+}
+
+.security-key .security-key-text {
+    font-size: 13px;
+}
+
+.next-btn button {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: unset;
+    border: none;
+}
+
+.next-btn button:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.inner-wrapper-options {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    min-height: 50px;
+    padding: 5px 35px;
+    display: flex;
+    align-items: center;
+}
+
+.inner-wrapper-options:hover {
+    background-color: var(--faded-gray);
+}
+
+.sign-in-options img {
+    width: 21%;
+}
+
+.sign-in-options a {
+    color: var(--black);
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* ============= sign up page css =============*/
+
+.inner-wrapper-height {
+    min-height: 273px !important;
+}
+
+.signup-heading h2 {
+    font-size: 23px;
+}
+
+.select {
+    width: 25%;
+}
+
+.phoneno {
+    width: 75%;
+}
+
+.select select {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: unset;
+    border-color: var(--black);
+    font-size: 16px;
+    padding-left: 4px;
+}
+
+.select select:focus {
+    box-shadow: none;
+    border: 1px solid var(--blue);
+}
+
+.phoneno .phone-field .form-control {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: unset;
+    border-color: var(--black);
+    font-size: 16px;
+    padding-left: 4px;
+}
+
+.phoneno .phone-field .form-control:focus {
+    box-shadow: none;
+}
+
+.use-email a {
+    font-size: 13px;
+    color: var(--blue);
+}
+
+.use-email a:hover{
+    text-decoration: underline !important;
+}
+
+.next-signup{
+    top: 67px;
+}
+
+/*================= options page css ================= */
+
+.options-heading h2 {
+    font-size: 24px;
+}
+
+.security{
+    background-color: var(--faded-gray);
+    margin-left: -35px;
+    margin-right: -35px;
+    outline: #000 dashed 1px;
+}
+
+.security:hover, .signin-github:hover {
+    background-color: var(--more-faded-gray);
+}
+
+.security .security-data ,.signin-github .security-data {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.signin-github {
+    margin-left: -35px;
+    margin-right: -35px;
+}
+
+.back-btn button {
+    background-color: var(--more-faded-gray);
+    border: none;
+    border-radius: unset;
+}
+
+.back-btn button a{
+    color: var(--black);
+}
+
+.back-btn button:hover {
+    background-color: var(--faded-gray);
+}
+
+/*========================== securitylogin page css =========================== */
+
+.inner-wrapper-securitylogin-height {
+    min-height: 293px !important;
+}
+
+.security-heading h2 {
+    font-size: 25px;
+}
+
+.security-heading span {
+    font-size: 15px;
+    color: var(--red);
+}
+
+.other-ways a {
+    font-size: 13px;
+}
+
+.other-ways a:hover {
+    text-decoration: underline !important;
+    color: var(--gray);
+}
+
+.back-try-again button {
+    border-radius: unset;
+    border: none;
+}
+
+.back-try-again .btn-back {
+    background-color: var(--faded-gray);
+}
+.back-try-again .btn-back a {
+    color: var(--black);
+}
+
+.back-try-again .btn-try {
+    background-color: var(--blue);
+    color: var(--white);   
+}
+.back-try-again .btn-try a {
+    color: var(--white);   
+}
+
+.back-try-again .btn-back:hover {
+    background-color: var(--more-faded-gray);
+}
+
+.back-try-again .btn-try:hover {
+    background-color: var(--dark-blue);
+}
+
+.input-email .form-floating input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    border-color: var(--black);
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 500;
+    padding-left: 4px;
+}
+
+.input-email .form-floating input:focus {
+    box-shadow: none;
+}
+
+.input-email .form-floating label{
+    padding-left: 0px !important;
+}
+
+/* ========================= index page css =============================*/
+
+.dashboard{
+    min-height: 100vh;
+}
+
+.left-column-bg{
+    background-color: var(--dashboard-bg-a);
+    color: var(--white);
+}
+
+.user-picture{
+    min-height: 51px;
+}
+
+/* .user-image {
+    background-image: url(../images/index_images/profile.webp);
+    background-size: cover;
+    background-position: center;
+    border-color: rgba(255, 255, 255, 0.4);
+    border-width: 1px;
+    border-style: solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+} */
+
+.user-name h6{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.user-name .superscript {
+    font-weight: 100;
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.user-name h6 sup {
+    top: unset !important;
+}
+
+.user-name a{
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.input-search, .dialer {
+    background-color: var(--bg-darken);
+}
+
+.input-search input {
+    min-width: 74%;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    color: var(--white);
+}
+
+.input-search input:focus-visible {
+    outline:none;
+}
+.text-tabs {
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.navigation-tabs .nav .nav-item .nav-link {
+    padding: 0px !important;
+}
+
+.navigation-tabs .nav-tabs {
+    border: none;
+}
+
+.navigation-tabs .nav .nav-item .active {
+    background-color: transparent;
+    border: none;
+}
+
+.navigation-tabs .nav .nav-item .nav-link:hover {
+    border: none;
+} 
+
+.navigation-tabs .nav .nav-item .nav-link {
+    border: none !important;
+}
+
+.navigation-tabs .nav .nav-item .active svg {
+    fill: var(--blue) !important;
+}
+
+.navigation-tabs .nav .nav-item .active p {
+    color: var(--blue) !important;
+}
+
+.navigation-tabs .nav .nav-item:hover > .navigation-tabs .nav .nav-item button svg{
+    fill: var(--white) !important;
+}
+.navigation-tabs .nav .nav-item:hover > .navigation-tabs .nav .nav-item button p{
+     color: var(--white) !important;
+}
+
+.meet-now {
+    background-color: var(--bg-darken);
+}
+
+.meet-now span, .meet-now ul li a, .all-people ul li a{
+    font-size: 12px;
+}
+
+.meet-now ul li a:hover, .meet-now ul li a:focus ,.all-people ul li a:hover, .all-people ul li a:focus{
+    background-color: var(--bg-darken);
+    color: var(--white);
+}
+
+.all-people span {
+    font-size: 13px;
+    color: var(--gray-text);
+}
+
+.user-name .message {
+    font-size: 15px;
+}
+
+.user-name .user-actual-name {
+    font-size: 16px;
+}
+
+.timestamp span {
+    color: var(--gray-text);
+}
+
+.inner-scroller {
+    overflow-y: scroll;
+    height: 74vh;
+    padding-right: 22px;
+}
+
+.call-show:hover > .svg-call svg {
+    fill: var(--white) !important;
+}
+
+.notification-scroller {
+    overflow-y: scroll;
+    height: 79.1vh;
+    padding-right: 22px;
+}
+
+.right-column-bg {
+    background-color: var(--dashboard-bg-b);
+    color: var(--white);
+}
+
+.close-column button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+}
+
+.close-column button span {
+    font-size: 30px;
+}
+
+.selection-modal select {
+    background-color: transparent !important;
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.selection-modal select:focus-visible {
+    outline:none;
+}
+
+.selection-modal select option {
+    background-color: var(--bg-darken);
+}
+
+.text-participants{
+    font-size: 14px !important;
+}
+
+.inner-content a {
+    padding: 0px 10px;
+}
+
+.inner-content button {
+    background-color: var(--blue-light);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 14px;
+}
+
+.top-header-row {
+    border-color: var(--gray) !important;
+}
+
+.main-container {
+    min-height: 84vh;
+}
+
+.message-box {
+    background-color: var(--bg-darken);
+}
+
+.message-box input, .message-box input:focus {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-iconed {
+    width: 45px;
+    height: 45px;
+    border-radius: 22px;
+    background-color: var(--bg-darken);
+    border: none;
+}
+
+/* modal css  */
+
+.dialer-globe-rates p, .dialer-globe-rates span{
+    font-size: 13px;
+    font-weight: 200;
+    color: var(--gray-text);
+}
+
+.dialer-trial-btn {
+    background-color: var(--green);
+    border: none;
+    color:var(--white);
+    font-size: 13px;
+}
+
+.table-body-dialer tr td{
+    border: none !important;
+}
+
+.table-body-dialer tr td p {
+    font-size: 12px;
+}
+
+.modal-dialer-table {
+    color: var(--white);
+    background-color: transparent;
+}
+
+.call-btn {
+    height: 58px;
+    width: 60px;
+    background-color: var(--blue-light);
+    border: none;
+}   
+
+.modal-dialer-head {
+    background-color: var(--bg-darken);
+    border: none;
+}
+
+.modal-phone {
+    background-color: var(--bg-darken);
+}
+
+.modal-phone .form-group input {
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.modal-phone .form-group input:focus {
+    box-shadow: none;
+}
+
+.modal-new-call-head {
+    border: none;
+}
+
+.modal-new-call {
+    background-color: var(--blue-light);
+}
+
+.modal-new-call .form-group input {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white) !important;
+}
+
+.modal-new-call .form-group input:focus {
+    box-shadow: none;
+}
+
+.new-call-selection-form .input-group-prepend .input-group-text {
+    border: none;
+    background-color: transparent;
+}
+
+.new-call-selection-form .input-group-prepend .input-group-text input[type='radio']:after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+}
+
+.new-call-height {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.new-call-btn {
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding: 0px 20px;
+    background-color: var(--blue-light);
+}
+
+.search-people-text {
+    font-size: 12px;
+}
+
+.invite-person a{
+    color: var(--white);
+    font-size: 12px;
+}
+
+/* =========================== media queries =========================== */
+
+@media all and (min-width: 1400px) and (max-width: 1466px) {
+    .for-xxl-left {
+        width: 18%;
+    }
+    .for-xxl-right {
+        width: 82%;
+    }
+}
