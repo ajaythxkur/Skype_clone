@@ -34,6 +34,7 @@ body {
     --bg-darken:rgb(43, 44, 51);
     --nav-icons:#0078d4;
     --green:rgb(77, 217, 101);
+    --settings-icon:#CCCCCC;
     --box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -56,6 +57,16 @@ body {
     width: 8px;
 }
 
+
+/*============ DYNAMIC SHOW HIDE CSS ============*/
+
+.message-container, .bookmarks-container {
+    display: none;
+}
+
+.message-interaction {
+    cursor: pointer;
+}
 
 /*============ LOGIN PAGE CSS START ============*/
 .login, .security-error, .email-sign-up, .signup, .signin-options {
@@ -628,6 +639,10 @@ body {
     background-color: var(--blue-light);
 }
 
+.modal-new-call .form-group input::placeholder {
+    color: var(--white);
+}
+
 .modal-new-call .form-group input {
     background-color: transparent;
     border: none;
@@ -674,6 +689,10 @@ body {
     font-size: 12px;
 }
 
+.status-selection li a:hover {
+    background-color: var(--bg-darken);
+}
+
 /* ======================================== profile page css =========================================*/
 
 .inner-profile-wrapper-area {
@@ -716,6 +735,9 @@ body {
     font-size: 14px;
 }
 
+.bookmarks-box {
+    height: 90vh;
+}
 
 /*===========profile modal ======================*/
 .profile-modal .modal-dialog .modal-content {
@@ -724,6 +746,131 @@ body {
 
 .profile-modal .modal-dialog {
     margin-left: 12px;
+}
+
+/*============================= sign out modal =============================*/
+
+.sign-out-modal-header {
+    border: none;
+}
+
+/* ============================= share what you are upto modal ================================*/
+
+.share-upto button {
+    background-color: var(--dark-blue);
+    border: none;
+    font-size: 12px;
+}
+
+.share-input-column form input {
+    background-color: transparent;
+    border: none;
+}
+
+.share-input-column form input:focus {
+    outline: none;
+}
+
+.suggested-column {
+    background-color: var(--bg-darken);
+}
+
+.suggested-column .inner-content-area .user-area span {
+    font-size: 14px;
+    color: var(--gray-text);
+    font-weight: 400;
+}
+
+/*==================================== invite modal ========================================= */
+
+.invite-modal-header {
+    border: 1px solid var(--bg-darken);
+}
+
+.invite-modal-text span {
+    font-size: 14px;
+}
+
+.invite-modal-image div {
+    border-radius: 0px 0px 10px 10px;
+}
+
+/*====================================== skype to phone modal =========================================*/
+
+.subscriptions span {
+    font-size: 14px;
+}
+
+.subscription-button button {
+    background-color: var(--blue-light);
+}
+
+/*====================================== skype profile modal =========================================*/
+
+.skype-profile-modal-header {
+    background-color: var(--blue-light);
+    border: none;
+}
+
+.skype-profile-modal-image img {
+    position: relative;
+    bottom: -40px;
+}
+
+.share-profile-modal {
+    border-color: var(--bg-darken) !important;
+}
+
+.profile-text span {
+    color: var(--gray-text);
+    font-size: 12px;
+}
+
+/* ===================================== skype settings modal css =============================== */
+
+.setting-left-column {
+    border-color: var(--bg-darken) !important;
+}
+
+.setting-left-column:hover {
+    background-color: var(--gray);
+    cursor: pointer;
+}
+
+.navigation-through-settings {
+    flex-direction: column;
+    border: none;
+}
+
+.navigation-through-settings .active {
+    background-color: var(--gray) !important;
+    border-radius: unset !important;
+}
+
+.navigation-through-settings .setting-left-column:hover {
+    border-radius: unset !important;
+}
+
+.profile-sec span {
+    color: var(--gray-text);
+    font-size: 12px;
+}
+
+.accounts-right button {
+    font-size: 12px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 5px 10px;
+}
+
+.privacy-right svg {
+    margin-top: 2px;
+}
+
+.privacy-small-text {
+    font-size: 12px;
+    color: var(--gray);
 }
 
 /* =========================== media queries =========================== */
