@@ -36,6 +36,12 @@ body {
     --green:rgb(77, 217, 101);
     --settings-icon:#CCCCCC;
     --box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --theme-color-b: rgb(73, 64, 154);
+    --theme-color-c: rgb(194, 57, 179);
+    --theme-color-d: rgb(0, 120, 212);
+    --theme-color-e: rgb(255, 103, 103);
+    --theme-color-f: rgb(247, 137, 74);
+    --disabled-blue: rgb(22, 134, 217);
 }
 
 /* scrollbar css  */
@@ -60,13 +66,17 @@ body {
 
 /*============ DYNAMIC SHOW HIDE CSS ============*/
 
-.message-container, .bookmarks-container {
+/* .message-container, .bookmarks-container {
+    display: none;
+} */
+
+.bookmarks-container {
     display: none;
 }
 
 .message-interaction {
     cursor: pointer;
-}
+} 
 
 /*============ LOGIN PAGE CSS START ============*/
 .login, .security-error, .email-sign-up, .signup, .signin-options {
@@ -741,7 +751,7 @@ body {
 
 /*===========profile modal ======================*/
 .profile-modal .modal-dialog .modal-content {
-    width: 58%;
+    width: 61%;
 }
 
 .profile-modal .modal-dialog {
@@ -873,6 +883,195 @@ body {
     color: var(--gray);
 }
 
+.theme-column {
+    background-color: var(--bg-darken);
+}
+.text-nice-theme span{
+    background: var(--gray-text);
+    padding: 9px;
+    border-radius: 7px 7px 7px 12px;
+}
+
+.choose-theme div{
+    height: 46px;
+    width: 46px;
+}
+
+.choose-theme div:nth-child(1){
+    background-color: var(--gray-text);
+}
+
+.choose-theme div:nth-child(2){
+    background-color: var(--theme-color-b);
+}
+
+.choose-theme div:nth-child(3){
+    background-color: var(--theme-color-c);
+}
+
+.choose-theme div:nth-child(4){
+    background-color: var(--theme-color-d);
+}
+
+.choose-theme div:nth-child(5){
+    background-color: var(--theme-color-e);
+}
+
+.choose-theme div:nth-child(6){
+    background-color: var(--theme-color-f);
+}
+
+.setting-theme-selection .form-check input {
+    border: 1px solid var(--gray-text);
+    background-color: transparent;
+}
+
+.calc-settings-height {
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.reduce-data-usage .user-area a {
+    font-size: 14px;
+    color: var(--gray-text);
+}
+
+.some-text span {
+    font-size: 12px;
+    color: var(--gray-text);
+}
+
+.skype-ver span{
+    color: var(--gray-text);
+    font-size: 13px;
+}
+
+/*============================================keyboard shortcuts column========================================== */
+
+.keyboard-shortcuts-column {
+    border-color: var(--gray-text) !important;
+}
+
+.keyboard-shortcuts-column p{
+    font-size: 14px;
+    color: var(--white);
+}
+
+.keyboard-shortcut-key span {
+    border: 1px solid var(--gray-text);
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 7px;
+}
+
+/*================================== host a meeting modal ================================*/
+.meeting-form .input-group {
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.meeting-form .input-group input {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    box-shadow: none;
+}
+
+.meeting-form .input-group .input-group-addon {
+    background-color: var(--dashboard-bg-b);
+    height: 33px;
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ======================================== join meeting modal ===============================*/
+
+.close-col button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+}
+
+.close-col button span {
+    font-size: 25px;
+}
+
+.meeting-code-label {
+    font-size: 13px;
+}
+
+.join-call-button button {
+    background-color: var(--disabled-blue);
+    border: none;
+    color: var(--white);
+}
+
+/*=================group chat modal================= */
+
+.group-chat-container {
+    background-color: var(--blue-light);
+}
+
+.group-chat-icon {
+    background-color: var(--blue-light);
+    height: 90px;
+    width: 90px;
+    bottom: -3%;
+}
+
+.group-chat-icon img {
+    bottom: -37%;
+    border: 1px solid var(--white);
+}
+
+.group-name-form input {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+    border-bottom: 1px solid var(--gray-text);
+}
+
+.group-name-form input:focus-visible {
+    outline: none;
+}
+
+.group-create-next button {
+    height: 60px;
+    width: 60px;
+    background-color: var(--disabled-blue);
+    border: none;
+}
+
+.check-input{
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.drop-down-chatbox {
+    background-color: var(--faded-gray);
+
+}
+
+.drop-down-chatbox a {
+    color: var(--white);
+}
+
+.drop-down-chatbox a:hover {
+    background-color: var(--more-faded-gray);
+    color: var(--white);
+}
+
+.input-upload {
+    width: 45px;
+    height: 45px;
+}
 /* =========================== media queries =========================== */
 
 @media all and (min-width: 1400px) and (max-width: 1466px) {
@@ -881,5 +1080,10 @@ body {
     }
     .for-xxl-right {
         width: 82%;
+    }
+}
+@media all and (max-width: 540px) {
+    .profile-modal .modal-dialog .modal-content {
+        width: 100% !important;
     }
 }
